@@ -1,0 +1,11 @@
+{
+  "tornado_cash": {
+    "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b": "Tornado Cash"
+  },
+  "scam_wallets": {
+    "0x6982508145454ce325ddbe47a25d4ec3d2311933": "PEPE token",
+    "0x3fc91a3afd70395cd496c647d5a6cc9d4b2b7fad": "Uniswap Universal Router",
+    "0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad": "Moodeng token"
+  }
+}
+
