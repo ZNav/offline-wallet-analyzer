@@ -1,9 +1,7 @@
-# offline-wallet-analyzer
-Blockchain Forensics tool made to view transactions and allow you to monitor wallets against known addresses
 # Wallet Analyzer
 
 A lightweight Python tool for analyzing Ethereum wallet transaction histories from CSV exports. It calculates ETH flow and flags interactions with known malicious addresses or services like Tornado Cash.
-
+Blockchain Forensics tool made to view transactions and allow you to monitor wallets against known addresses
 ---
 
 ## Features
