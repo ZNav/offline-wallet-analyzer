@@ -1,8 +1,13 @@
-# Wallet Analyzer
+# offline-wallet-analyzer
 
-A lightweight Python tool for analyzing Ethereum wallet transaction histories from CSV exports. It calculates ETH flow and flags interactions with known malicious addresses or services like Tornado Cash.
-Blockchain Forensics tool made to view transactions and allow you to monitor wallets against known addresses
----
+[![tests](https://github.com/ZNav/offline-wallet-analyzer/actions/workflows/tests.yml/badge.svg)](https://github.com/ZNav/offline-wallet-analyzer/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+
+A lightweight Python tool for analyzing Ethereum wallet transaction histories
+from CSV exports. Calculates ETH flow and flags interactions with known
+malicious addresses (scam wallets, mixers like Tornado Cash, suspicious
+tokens). Stdlib-only, runs entirely offline.
 
 ## Features
 
@@ -63,6 +68,17 @@ python3 analyzer.py -w 0xabc...123 -c wallet.csv -k known_contracts.json
 ```
 
 ---
+
+## Development
+
+```bash
+pip install pytest
+pytest -v
+```
+
+12 tests covering ETH-flow math, BOM-prefixed Etherscan exports,
+case-insensitive address matching, and known-contract flagging. CI runs on
+Python 3.10 / 3.11 / 3.12 (see `.github/workflows/tests.yml`).
 
 ## Contributing
 

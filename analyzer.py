@@ -7,7 +7,7 @@ from collections import defaultdict
 
 
 def load_known_contracts(filepath):
-    with open(filepath, "r") as file:
+    with open(filepath, "r", encoding="utf-8-sig") as file:
         return json.load(file)
 
 
@@ -17,7 +17,8 @@ def analyze_wallet(wallet_address, csv_path, known_contracts):
     eth_out = 0.0
     flagged = []
 
-    with open(csv_path, "r") as file:
+    # utf-8-sig strips the BOM Etherscan exports include for Excel compat
+    with open(csv_path, "r", encoding="utf-8-sig") as file:
         reader = csv.DictReader(file)
         for row in reader:
             tx_hash = row["Transaction Hash"]

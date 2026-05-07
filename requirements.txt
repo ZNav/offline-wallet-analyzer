@@ -1,1 +1,3 @@
-txt
+# Runtime: stdlib only — no external dependencies.
+# Dev / test:
+#   pip install pytest
